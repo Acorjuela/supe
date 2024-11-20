@@ -567,6 +567,11 @@ button.disable {
         text-align: center; /* Centra el texto */
         padding: 100px 20px;
     }
+    .modal-content {
+        width: 100%; /* Ajusta el ancho del contenido */
+        overflow-x: hidden; /* Para evitar desplazamiento horizontal */
+        overflow-y: visible; /* Permitir desplazamiento vertical si es necesario */        
+    }
 }
 
 @keyframes animate {
