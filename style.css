@@ -69,7 +69,6 @@ section {
     left: -50px;
     width: 120px;
     height: 120px;
-    z-index: 2;
     background: linear-gradient(to top, #11998e, #38ef7d);
 }
 
@@ -78,7 +77,6 @@ section {
     right: -630px;
     width: 120px;
     height: 120px;
-    z-index: 2;
     background: linear-gradient(to bottom, #f953c6, #b91d73);
 }
 
@@ -482,6 +480,9 @@ button.disable {
 
 .Captura {
     background: none;
+    margin: 10px 0 20px;
+    font-size: 18px;
+    padding: 10px;
 }
 
 /* Contenedor de información */
