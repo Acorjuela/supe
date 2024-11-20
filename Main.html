@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://sbt.0soft.dev/sheet-best-templates.min.js"></script>
+    <link rel="icon" type="image/jpg" href="/img/Imagen de WhatsApp 2024-11-15 a las 00.18.24_3a2ffb8a-Photoroom.png">
+    <title>Sorteo Lotería</title>
+</head>
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+            <div class="square" style="--i:5;"></div>
+    </section>
+    <div class="container step1">
+        <div class="form-image">
+            <img src="img/Imagen de WhatsApp 2024-11-15 a las 00.18.24_3a2ffb8a-Photoroom.png" alt="">
+        </div>
+        <div class="form">
+            <form onsubmit="event.preventDefault(); validateForm();">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Sorteo Lotería</h1>
+                        <p id="palabra">Especial de Navidad</p>
+                    </div>
+                    <div class="login-button">
+                        <button type="button" onclick="document.location='index.html'">Cerrar sesión</button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <!-- Campos del formulario -->
+                     
+                    <div class="input-box">
+                        <label for="Nombres">Nombres</label>
+                        <input id="Nombres" type="text" name="Nombres" placeholder="Ingresa tu nombre" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Apellido">Apellido</label>
+                        <input id="Apellido" type="text" name="Apellido" placeholder="Ingresa tu apellido" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Email">Email</label>
+                        <input id="Email" type="email" name="Email" placeholder="Ingresa tu correo" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Ciudad">Ciudad</label>
+                        <input id="Ciudad" type="text" name="Ciudad" placeholder="Ingresa tu ciudad" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="País">País</label>
+                        <input id="País" type="text" name="País" placeholder="Ingresa tu país" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Nombre_de_responsable">Nombre de Responsable</label>
+                        <select id="Nombre_de_responsable" required>
+                            <option value="">Seleccione un responsable</option>
+                            <option value="Veronica Ares">Veronica Ares</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Celular_de_responsable">Celular de Responsable</label>
+                        <select id="Celular_de_responsable" required>
+                            <option value="">Seleccione un celular</option>
+                            <option value="(+57) 3178783350">(+57) 3178783350</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Premio">Premio:</label>
+                        <select id="Premio" required>
+                            <option value="">Seleccione un premio</option>
+                            <option value="$2.000.000">$2.000.000</option>
+                        </select>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Valor_boleta">Valor Boleta</label>
+                        <select id="Valor_boleta" onchange="updateOTPForms()" required>
+                            <option value="0">Selecciona una opción</option>
+                            <option value="1">1 Boleta ($20.000)</option>
+                            <option value="2">2 Boletas ($40.000)</option>
+                            <option value="3">3 Boletas ($60.000)</option>
+                            <option value="4">4 Boletas ($80.000)</option>
+                            <option value="5">5 Boletas ($100.000)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="Fin">
+                    <p>Juega con la Lotería de Boyacá</p>
+                    <p>El 21 de diciembre del 2024</p>
+                </div>
+
+                <!-- Sección de OTP -->
+                <div id="otpSection"></div>
+
+                <div class="continue-button">
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h2 class="datos">Resumen de Datos</h2>
+            <div class="info-container">
+                <p class="info-item" id="modalNombres"></p>
+                <p class="info-item" id="modalApellido"></p>
+                <p class="info-item" id="modalEmail"></p>
+                <p class="info-item" id="modalCiudad"></p>
+                <p class="info-item" id="modalLocation"></p>
+                <p class="info-item" id="modalResponsable"></p>
+                <p class="info-item" id="modalCelular"></p>
+                <p class="info-item" id="modalPremio"></p>
+                <p class="info-item" id="modalBoletas"></p>
+                <p class="info-item" id="modalTotal"></p>
+                <div class="info-item" id="modalOtps"></div>
+            </div>
+            <button class="close-btn" onclick="closeModal()">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
