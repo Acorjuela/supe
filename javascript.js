@@ -139,7 +139,7 @@ async function sendDataToSheetBest(data) {
             Swal.fire({
                 icon: "success",
                 title: "¡Datos enviados!",
-                text: "Tu información se guardó correctamente en Google Sheets.",
+                text: "Tu información se guardó correctamente en Gracias por esperar. ¡Ya estamos disponibles!",
             });
         } else {
             throw new Error(result.message || "Error al enviar datos");
